@@ -1,63 +1,1343 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Joy's portfolio</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Joy Sutradhar - Web Developer, Security Analyst & Creative Designer">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Joy Sutradhar | Advanced Creative Portfolio</title>
+
+    <!-- =========================================
+         EXTERNAL LIBRARIES
+    ========================================== -->
+    
+    <!-- Tailwind CSS (Utility) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- GSAP (Animation Engine) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+    
+    <!-- Three.js (3D Rendering) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    
+    <!-- Lenis (Smooth Scrolling) -->
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+    
+    <!-- SYSTEM LOCKDOWN: KEYBOARD, MOUSE & DEVTOOLS PROTECTION -->
+<script>
+(function() {
+    // 1. DISABLE RIGHT CLICK & SELECTION
+    document.addEventListener('contextmenu', function(e) {
+        e.preventDefault(); // Blocks right-click menu
+        return false;
+    });
+
+    document.addEventListener('selectstart', function(e) {
+        e.preventDefault(); // Blocks text selection
+    });
+    
+    document.addEventListener('dragstart', function(e) {
+        e.preventDefault(); // Blocks image dragging
+    });
+
+    // 2. KEYBOARD SHORTCUT BLOCKER (Ctrl+Shift+I, F12, Ctrl+U, Ctrl+S, etc.)
+    document.addEventListener('keydown', function(e) {
+        // Block F12 (DevTools)
+        if (e.key === 'F12' || e.keyCode === 123) {
+            e.preventDefault();
+            e.stopPropagation();
+            alert("Security Protocol Engaged: Access Denied.");
+            return false;
+        }
+
+        // Block Ctrl+Shift+I (Inspect), Ctrl+Shift+J (Console), Ctrl+Shift+C (Element Inspector)
+        if (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J' || e.key === 'C')) {
+            e.preventDefault();
+            e.stopPropagation();
+            alert("Security Protocol Engaged: Access Denied.");
+            return false;
+        }
+
+        // Block Ctrl+U (View Source)
+        if (e.ctrlKey && (e.key === 'U' || e.key === 'u')) {
+            e.preventDefault();
+            e.stopPropagation();
+            return false;
+        }
+
+        // Block Ctrl+S (Save Page)
+        if (e.ctrlKey && (e.key === 'S' || e.key === 's')) {
+            e.preventDefault();
+            e.stopPropagation();
+            return false;
+        }
+        
+        // Block Ctrl+C (Copy) - Optional (Remove if you want people to contact you)
+        if (e.ctrlKey && (e.key === 'C' || e.key === 'c')) {
+            e.preventDefault();
+            e.stopPropagation();
+            return false;
+        }
+    });
+
+    // 3. AGGRESSIVE DEVTOOLS DETECTOR & BLOCKER
+    // This script repeatedly triggers the 'debugger'. 
+    // If DevTools is OPEN, the browser will pause here. 
+    // If DevTools is CLOSED, it passes instantly.
+    
+    function annoyingDebugger() {
+        const start = new Date().getTime();
+        // The core trap: This keyword freezes the browser if DevTools is open
+        debugger; 
+        const end = new Date().getTime();
+
+        // If 'debugger' paused execution for more than 100ms, DevTools is definitely open
+        if (end - start > 100) {
+            // Nuke the body content
+            document.body.innerHTML = '<div style="background:black;color:red;height:100vh;display:flex;justify-content:center;align-items:center;font-family:monospace;font-size:3rem;text-align:center;">SYSTEM BREACH DETECTED<br>SESSION TERMINATED</div>';
+            // Throw error to stop other scripts
+            throw "Security Alert";
+        }
+    }
+
+    // Run the check instantly
+    annoyingDebugger();
+
+    // Run the check every second to catch users who open it later
+    setInterval(annoyingDebugger, 1000);
+
+})();
+</script>
+<!-- END LOCKDOWN SCRIPT -->
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+
+    <!-- =========================================
+         TAILWIND CONFIGURATION
+    ========================================== -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1a1a1a',
+                        secondary: '#F9F9F7',
+                        accent: '#000000',
+                        muted: '#888888',
+                        'border-light': '#e5e5e5',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    spacing: {
+                        '128': '32rem',
+                        '144': '36rem',
+                    },
+                    height: {
+                        'screen-dvh': '100dvh',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- =========================================
+         CUSTOM STYLES (Extended for Visuals)
+    ========================================== -->
+    <style>
+        :root {
+            --cursor-size: 20px;
+            --cursor-hover-size: 80px;
+            --bg-body: #F9F9F7;
+            --text-main: #1a1a1a;
+        }
+
+        body {
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            overflow-x: hidden;
+            cursor: none; /* Hiding default cursor */
+            transition: background-color 0.5s ease, color 0.5s ease;
+        }
+
+        /* --- Dark Mode Overrides --- */
+        body.dark-mode {
+            --bg-body: #0a0a0a;
+            --text-main: #e5e5e5;
+            background-color: #0a0a0a;
+            color: #e5e5e5;
+        }
+
+        /* Override specific Tailwind/Custom classes in Dark Mode */
+        body.dark-mode .text-primary { color: #ffffff !important; }
+        body.dark-mode .text-gray-600 { color: #a3a3a3 !important; }
+        body.dark-mode .text-black { color: #ffffff !important; }
+        body.dark-mode .bg-secondary { background-color: #111111 !important; }
+        body.dark-mode .bg-white { 
+            background-color: #1a1a1a !important; 
+            border-color: #333 !important;
+        }
+        body.dark-mode .border-gray-200 { border-color: #333 !important; }
+        body.dark-mode .border-gray-100 { border-color: #333 !important; }
+        body.dark-mode .skill-card:hover {
+            background: #252525 !important;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+        }
+        body.dark-mode .reveal-overlay { background-color: #0a0a0a !important; }
+
+        /* --- Custom Cursor --- */
+        #cursor-dot,
+        #cursor-outline {
+            position: fixed;
+            top: 0;
+            left: 0;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            z-index: 9999;
+            pointer-events: none;
+        }
+
+        #cursor-dot {
+            width: 8px;
+            height: 8px;
+            background-color: #000;
+            transition: background-color 0.3s;
+        }
+        
+        body.dark-mode #cursor-dot {
+            background-color: #fff;
+        }
+
+        #cursor-outline {
+            width: 40px;
+            height: 40px;
+            border: 1px solid rgba(0, 0, 0, 0.5);
+            transition: width 0.2s, height 0.2s, background-color 0.2s, border-color 0.3s;
+        }
+        
+        body.dark-mode #cursor-outline {
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+
+        body.hovering #cursor-outline {
+            width: 80px;
+            height: 80px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-color: transparent;
+            /* backdrop-filter: blur(2px);  <-- REMOVED BLUR AS REQUESTED */
+            mix-blend-mode: difference;
+        }
+
+        /* --- Loader --- */
+        #loader {
+            position: fixed;
+            inset: 0;
+            background: #000;
+            z-index: 10000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            flex-direction: column;
+        }
+        
+        .loader-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            overflow: hidden;
+        }
+
+        .loader-bar-container {
+            width: 200px;
+            height: 2px;
+            background: rgba(255,255,255,0.2);
+            margin-top: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .loader-bar {
+            width: 0%;
+            height: 100%;
+            background: #fff;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        /* --- Typography Utilities --- */
+        .text-balance {
+            text-wrap: balance;
+        }
+        
+        .clip-text-image {
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            background-image: url('https://images.unsplash.com/photo-1491895200222-0fc4a4c35e18?q=80&w=2874&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* --- Layout Utilities --- */
+        .section-padding {
+            padding-top: 120px;
+            padding-bottom: 120px;
+        }
+
+        .line-separator {
+            width: 100%;
+            height: 1px;
+            background: rgba(0,0,0,0.1);
+            margin: 2rem 0;
+            transition: background 0.5s;
+        }
+        
+        body.dark-mode .line-separator {
+            background: rgba(255,255,255,0.1);
+        }
+
+        /* --- Image Reveal Animation --- */
+        .reveal-wrap {
+            position: relative;
+            overflow: hidden;
+        }
+        .reveal-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: scale(1.2);
+            transition: transform 1.5s ease;
+        }
+        .reveal-wrap:hover .reveal-img {
+            transform: scale(1);
+        }
+        .reveal-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #F9F9F7;
+            z-index: 2;
+        }
+
+        /* --- 3D Canvas Container --- */
+        #canvas-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            z-index: -1;
+            opacity: 0.6;
+            pointer-events: all; /* allow mouse interaction */
+        }
+
+        /* --- Marquee --- */
+        .marquee-container {
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+        }
+        .marquee-content {
+            display: inline-block;
+            animation: scroll 30s linear infinite;
+        }
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        
+        /* --- Skill Cards --- */
+        .skill-card {
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            opacity: 1; /* Default opacity */
+        }
+        .skill-card:hover {
+            transform: translateY(-10px);
+            background: #fff;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+        }
+
+        /* =========================================
+           THEME SWITCH BUTTON STYLES
+        ========================================== */
+        .theme-switch-container {
+            position: fixed;
+            bottom: 30px;
+            right: 30px; /* MOVED TO RIGHT */
+            z-index: 10001; /* Above cursor and loader */
+            transform: scale(0.8); 
+            transform-origin: bottom right; /* Changed origin to right */
+        }
+
+        /* From Uiverse.io by JustCode14 */ 
+        /* The switch - the box around the slider */
+        .switch {
+            font-size: 17px;
+            position: relative;
+            display: inline-block;
+            width: 4em;
+            height: 2.2em;
+            border-radius: 30px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Hide default HTML checkbox */
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        /* The slider */
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #2a2a2a;
+            transition: 0.4s;
+            border-radius: 30px;
+            overflow: hidden;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 1.2em;
+            width: 1.2em;
+            border-radius: 20px;
+            left: 0.5em;
+            bottom: 0.5em;
+            transition: 0.4s;
+            transition-timing-function: cubic-bezier(0.81, -0.04, 0.38, 1.5);
+            box-shadow: inset 8px -4px 0px 0px #fff;
+        }
+
+        .switch input:checked + .slider {
+            background-color: #00a6ff;
+        }
+
+        .switch input:checked + .slider:before {
+            transform: translateX(1.8em);
+            box-shadow: inset 15px -4px 0px 15px #ffcf48;
+        }
+
+        .star {
+            background-color: #fff;
+            border-radius: 50%;
+            position: absolute;
+            width: 5px;
+            transition: all 0.4s;
+            height: 5px;
+        }
+
+        .star_1 {
+            left: 2.5em;
+            top: 0.5em;
+        }
+
+        .star_2 {
+            left: 2.2em;
+            top: 1.2em;
+        }
+
+        .star_3 {
+            left: 3em;
+            top: 0.9em;
+        }
+
+        .switch input:checked ~ .slider .star {
+            opacity: 0;
+        }
+
+        .cloud {
+            width: 3.5em;
+            position: absolute;
+            bottom: -1.4em;
+            left: -1.1em;
+            opacity: 0;
+            transition: all 0.4s;
+        }
+
+        .switch input:checked ~ .slider .cloud {
+            opacity: 1;
+        }
+    </style>
 </head>
-<body>
-  
-<div class="top-info">
-  <h1>JOY SUTRADHAR</h1>
-  <p><b>Programmer. Problem Solver. Tech Enthusiast.</b></p>
-  <address>joysutradharpc@gmail.com || +880-1781763345 || Dhaka, Bangladesh</address>
-</div>
-  <h2>CAREER SUMMARY</h2>
-  <p>Over 1 year of experience in ICT teaching. Skilled in lightweight e-commerce websites using diverse technologies. Actively involved in Web3 projects as a Community Manager
-and Support Lead. Highly motivated, passionate, and hardworking.</p>
-<h2>EXPERIENCE</h2>
-<div ><p><b>Teacher</b></p>
-<p><strong>Professor’s Science care, Mirpur-12,Dhaka</strong></p>
-<p>Apr, 2023 - May, 2024</p>
-<ul><li>Worked as ICT Teacher in science care, Dhaka</li>
-<li>3 days in a week</li>
-</ul>
-<p><b>Community Manager</b></p>
-<p><strong>SoarFun Web3 gaming hub, Discord community</strong></p>
-<p>july, 2024 - Sep, 2024</p>
-<ul><li>Served as Community Manager</li>
-<li>Overseeing content creation</li>
-<li>Maintaining community engagement</li></ul>
-</div>
-<div>
-  <h2>STRENGTHS & SKILLS</h2>
-  <p>Competitive Programming | Object Oriented Programming | Content Writing |Automation | PYautaGUI | Github | Python | C | BS4 | n8n | Web3 | Community Management |Problem Solving
+<body class="antialiased selection:bg-black selection:text-white">
 
- | Data Mining | Generative Ai | LLM | Flask Selenium</p>
-</div>
-<div><H2>Project</H2>
-<b> 
-  <ul><li>Clonify(Ai Voice Cloner)</li>
-    <li>FlixHUB (Flask E-commerce)</li> 
-    <li>MyPic (Secure image sharing) | <a href="https://github.com/J0Ysutradhar" target="_blank" rel="noopener noreferrer"> Others Project</a></li>
-  </ul>
-</b>
-</div>
-<div><h2>EDUCATION</h2>
-Higher Secondary Education
-in Science ||
-Govt. Bangabandhu College Dhaka
-2022-2024 || 
-Result GPA 4.75 out of 5.00
+    <!-- =========================================
+         THEME SWITCHER BUTTON
+    ========================================== -->
+    <div class="theme-switch-container hover-trigger">
+        <label class="switch">
+            <!-- checked="true" by default means Day/Light Mode -->
+            <input checked="true" id="checkbox" type="checkbox" onchange="toggleTheme(this)" />
+            <span class="slider">
+                <div class="star star_1"></div>
+                <div class="star star_2"></div>
+                <div class="star star_3"></div>
+                <svg viewBox="0 0 16 16" class="cloud_1 cloud">
+                    <path
+                        transform="matrix(.77976 0 0 .78395-299.99-418.63)"
+                        fill="#fff"
+                        d="m391.84 540.91c-.421-.329-.949-.524-1.523-.524-1.351 0-2.451 1.084-2.485 2.435-1.395.526-2.388 1.88-2.388 3.466 0 1.874 1.385 3.423 3.182 3.667v.034h12.73v-.006c1.775-.104 3.182-1.584 3.182-3.395 0-1.747-1.309-3.186-2.994-3.379.007-.106.011-.214.011-.322 0-2.707-2.271-4.901-5.072-4.901-2.073 0-3.856 1.202-4.643 2.925"
+                    ></path>
+                </svg>
+            </span>
+        </label>
+    </div>
 
-</div>
-<div><h2>ACHIEVEMENTS</h2>
-<p><b>MTF Programming Contest 2023,</b> 
-Crowned Champion at the MTF Programming Contest,
-<address>organized by World University of Bangladesh</address></p>
-<p><b>Bangladesh AI Olympiad 2024</b> Secured 3rd place at the BDAIO</p>
-<address>Organized by, BDAIO</address>
-</div>
+    <!-- =========================================
+         PRELOADER
+    ========================================== -->
+    <div id="loader">
+        <div class="loader-text">
+            <div class="overflow-hidden">
+                <span class="inline-block transform translate-y-full" id="loader-name">Joy Sutradhar</span>
+            </div>
+        </div>
+        <div class="loader-bar-container">
+            <div class="loader-bar" id="loader-progress"></div>
+        </div>
+        <div class="mt-4 font-mono text-xs text-gray-400" id="loader-status">INITIALIZING SYSTEM...</div>
+    </div>
+
+    <!-- =========================================
+         CUSTOM CURSOR
+    ========================================== -->
+    <div id="cursor-dot"></div>
+    <div id="cursor-outline"></div>
+
+    <!-- =========================================
+         NAVIGATION
+    ========================================== -->
+    <nav class="fixed top-0 left-0 w-full z-50 px-8 py-6 flex justify-between items-center mix-blend-difference text-white transition-transform duration-500" id="navbar">
+        <a href="#" class="text-2xl font-serif italic font-bold hover-trigger" data-cursor="Logo">
+            Joy<span class="text-xs font-sans not-italic ml-1 opacity-70">SD</span>
+        </a>
+        
+        <div class="hidden md:flex gap-10 font-mono text-xs tracking-widest uppercase">
+            <a href="#about" class="hover:text-gray-400 transition-colors hover-trigger">01. Profile</a>
+            <a href="#expertise" class="hover:text-gray-400 transition-colors hover-trigger">02. Expertise</a>
+            <a href="#system" class="hover:text-gray-400 transition-colors hover-trigger">03. System</a>
+            <a href="#work" class="hover:text-gray-400 transition-colors hover-trigger">04. Work</a>
+            <a href="#contact" class="hover:text-gray-400 transition-colors hover-trigger">05. Contact</a>
+        </div>
+
+        <button class="md:hidden hover-trigger" id="menu-toggle">
+            <i class="fas fa-bars text-xl"></i>
+        </button>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="fixed inset-0 bg-black z-40 transform translate-x-full transition-transform duration-700 flex items-center justify-center" id="mobile-menu">
+        <button class="absolute top-6 right-8 text-white text-2xl" id="menu-close">
+            <i class="fas fa-times"></i>
+        </button>
+        <div class="flex flex-col gap-8 text-center font-serif text-4xl text-white">
+            <a href="#about" class="mobile-link hover:text-gray-400 transition-colors">Profile</a>
+            <a href="#expertise" class="mobile-link hover:text-gray-400 transition-colors">Expertise</a>
+            <a href="#system" class="mobile-link hover:text-gray-400 transition-colors">System</a>
+            <a href="#contact" class="mobile-link hover:text-gray-400 transition-colors">Contact</a>
+        </div>
+    </div>
+
+    <!-- =========================================
+         MAIN CONTENT WRAPPER (FOR SMOOTH SCROLL)
+    ========================================== -->
+    <main id="smooth-wrapper">
+        
+        <!-- =========================================
+             HERO SECTION
+        ========================================== -->
+        <section class="relative h-screen-dvh flex flex-col justify-center items-start px-6 md:px-20 overflow-hidden">
+            <!-- 3D Background Canvas -->
+            <div id="canvas-container"></div>
+
+            <div class="relative z-10 max-w-5xl">
+                <div class="overflow-hidden mb-4">
+                    <p class="font-mono text-sm text-muted uppercase tracking-widest hero-text translate-y-full">
+                        Northern University Student & Developer
+                    </p>
+                </div>
+                <div class="overflow-hidden">
+                    <h1 class="text-6xl md:text-[8rem] leading-[0.9] font-serif text-primary mb-6 hero-text translate-y-full">
+                        Joy <span class="italic text-gray-400 font-light">Sutradhar.</span>
+                    </h1>
+                </div>
+                <div class="overflow-hidden max-w-2xl">
+                    <p class="text-lg md:text-xl text-gray-600 leading-relaxed hero-text translate-y-full text-balance">
+                        Bridging the gap between <strong class="text-black">Technical Security</strong> and <strong class="text-black">Visual Creativity</strong>. 
+                        Based in Dhaka, operating globally.
+                    </p>
+                </div>
+
+                <div class="mt-12 flex flex-wrap gap-6 hero-text translate-y-full opacity-0">
+                    <a href="#contact" class="group relative px-8 py-4 bg-black text-white rounded-full overflow-hidden hover-trigger" data-cursor="Contact">
+                        <div class="absolute inset-0 w-full h-full bg-gray-800 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
+                        <span class="relative font-mono text-sm uppercase tracking-wider">Initiate Protocol</span>
+                    </a>
+                    <a href="#work" class="px-8 py-4 border border-gray-300 rounded-full font-mono text-sm uppercase tracking-wider hover:bg-black hover:text-white transition-all duration-300 hover-trigger text-black dark:text-white dark:border-gray-700 dark:hover:bg-white dark:hover:text-black">
+                        View Documentation
+                    </a>
+                </div>
+            </div>
+
+            <!-- Scroll Indicator -->
+            <div class="absolute bottom-10 right-10 md:right-20 flex flex-col items-center gap-2 animate-bounce">
+                <span class="text-[10px] font-mono uppercase writing-vertical text-gray-400">Scroll Down</span>
+                <i class="fas fa-arrow-down text-xs text-gray-400"></i>
+            </div>
+        </section>
+
+        <!-- =========================================
+             MARQUEE STRIP
+        ========================================== -->
+        <div class="py-8 bg-black text-white border-y border-gray-800 overflow-hidden">
+            <div class="marquee-container">
+                <div class="marquee-content font-serif text-3xl italic flex items-center gap-12 opacity-50">
+                    <span>Ai Automation</span> <i class="fas fa-asterisk text-xs"></i>
+                    <span>Web Development</span> <i class="fas fa-asterisk text-xs"></i>
+                    <span>Cloud Computing</span> <i class="fas fa-asterisk text-xs"></i>
+                    <span>Penetration Testing</span> <i class="fas fa-asterisk text-xs"></i>
+                    <span>Security Analysis</span> <i class="fas fa-asterisk text-xs"></i>
+                    <!-- <span>Audio Visual Production</span> <i class="fas fa-asterisk text-xs"></i> -->
+                    <!-- Repeat -->
+                    <span>Ai Automation</span> <i class="fas fa-asterisk text-xs"></i>
+                    <span>Web Development</span> <i class="fas fa-asterisk text-xs"></i>
+                    <span>Cloud Computing</span> <i class="fas fa-asterisk text-xs"></i>
+                    <span>Ai agents building</span> <i class="fas fa-asterisk text-xs"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- =========================================
+             ABOUT / BIOGRAPHY SECTION
+        ========================================== -->
+        <section id="about" class="section-padding px-6 md:px-20 bg-white relative">
+            <div class="grid md:grid-cols-12 gap-16">
+                <!-- Image Column -->
+                <div class="md:col-span-5">
+                    <div class="reveal-wrap aspect-[3/4] rounded-sm shadow-2xl">
+                        <div class="reveal-overlay"></div>
+                        <!-- Placeholder Image - Replace with User's Photo -->
+                        <img src="./media/joy.jpeg" 
+                             alt="Joy Sutradhar Profile" 
+                             class="reveal-img grayscale">
+                    </div>
+                    
+                    <!-- Personal Stats -->
+                    <div class="mt-8 grid grid-cols-2 gap-4">
+                        <div class="p-4 bg-secondary rounded border border-gray-100">
+                            <h3 class="text-3xl font-serif">10+</h3>
+                            <p class="text-xs font-mono text-muted uppercase mt-1">Project Built</p>
+                            <p class="text-[10px] text-gray-400">Open Source ontributor</p>
+                        </div>
+                        <div class="p-4 bg-secondary rounded border border-gray-100">
+                            <h3 class="text-3xl font-serif">200+</h3>
+                            <p class="text-xs font-mono text-muted uppercase mt-1">CP peoblem solved</p>
+                            <p class="text-[10px] text-gray-400">3k Hackos point in Hackerrank</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text Column -->
+                <div class="md:col-span-7 flex flex-col justify-center">
+                    <span class="font-mono text-xs text-accent uppercase tracking-widest mb-4 flex items-center gap-2">
+                        <span class="w-8 h-[1px] bg-accent dark:bg-white"></span> About The Candidate
+                    </span>
+                    
+                    <h2 class="text-4xl md:text-5xl font-serif leading-tight mb-8">
+                        Versatile thinker specializing in <span class="italic text-gray-400">Optimization</span> & <span class="italic text-gray-400">Code Arts</span>.
+                    </h2>
+
+                    <div class="space-y-6 text-gray-600 leading-relaxed">
+                        <p>
+                            I am Joy Sutradhar, a versatile and dedicated Pre-University student with a passion for dismantling complex systems—whether that means breaking down code to find vulnerabilities or deconstructing visuals to create stunning designs.
+                        </p>
+                        <p>
+                            Known for innovative thinking and strict punctuality, I thrive in environments that require a dual-brain approach: the logical precision of a <strong>Security Analyst</strong> and the aesthetic intuition of a <strong>Creative Designer</strong>.
+                        </p>
+                        <p>
+                            Currently based in <strong>Bashabo, Dhaka</strong>, I am actively seeking to leverage my diverse skill set in a remote capacity, delivering high-quality work that merges functionality with form.
+                        </p>
+                    </div>
+
+                    <div class="mt-12 pt-8 border-t border-gray-100 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 font-mono text-xs">
+                        <div>
+                            <span class="block text-gray-400 mb-1">Location</span>
+                            <span class="block text-black">Dhaka, Bangladesh</span>
+                        </div>
+                        <div>
+                            <span class="block text-gray-400 mb-1">Email</span>
+                            <a href="mailto:Joysutradharpc@gmail.com" class="block text-black underline decoration-dotted break-all">Joysutradharpc@gmail.com</a>
+                        </div>
+                        <div>
+                            <span class="block text-gray-400 mb-1">Availability</span>
+                            <span class="block text-green-600 flex items-center gap-2">
+                                <span class="w-2 h-2 rounded-full bg-green-600 animate-pulse"></span> Remote Open
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================
+             EXPERTISE / SERVICES SECTION
+        ========================================== -->
+        <section id="expertise" class="section-padding px-6 md:px-20 bg-secondary">
+            <div class="max-w-7xl mx-auto">
+                <div class="mb-20">
+                    <span class="font-mono text-xs text-accent uppercase tracking-widest mb-2 block dark:text-gray-400">02 // Expertise</span>
+                    <h2 class="text-4xl md:text-6xl font-serif">Technical Arsenal</h2>
+                </div>
+
+                <!-- Service Grid -->
+                <!-- Added an ID for clearer triggering -->
+                <div id="skills-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    
+                    <!-- Card 1: Web Dev -->
+                    <div class="skill-card p-8 rounded-xl border border-gray-200 bg-white group hover-trigger" data-cursor="Code">
+                        <div class="w-12 h-12 bg-black text-white rounded-full flex items-center justify-center mb-6 text-xl group-hover:rotate-12 transition-transform dark:bg-white dark:text-black">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3 class="text-xl font-serif font-bold mb-3">Web Management</h3>
+                        <p class="text-sm text-gray-500 mb-4 leading-relaxed">
+                            Full-stack development focusing on web ecosystems. From creating bespoke themes to managing server-side performance.
+                        </p>
+                        <ul class="text-xs font-mono text-gray-400 space-y-2">
+                            <li>+ Web app Development</li>
+                            <li>+ Front-end & Back-end</li>
+                            <li>+ Performance Optimization</li>
+                        </ul>
+                    </div>
+
+                    <!-- Card 2: Security -->
+                    <div class="skill-card p-8 rounded-xl border border-gray-200 bg-white group hover-trigger" data-cursor="Secure">
+                        <div class="w-12 h-12 bg-black text-white rounded-full flex items-center justify-center mb-6 text-xl group-hover:rotate-12 transition-transform dark:bg-white dark:text-black">
+                            <i class="fas fa-user-secret"></i>
+                        </div>
+                        <h3 class="text-xl font-serif font-bold mb-3">Security Analysis</h3>
+                        <p class="text-sm text-gray-500 mb-4 leading-relaxed">
+                            Identifying vulnerabilities through penetration testing and information gathering. Securing digital assets against threats.
+                        </p>
+                        <ul class="text-xs font-mono text-gray-400 space-y-2">
+                            <li>+ Penetration Testing</li>
+                            <li>+ Info Gathering</li>
+                            <li>+ Cloud Security</li>
+                        </ul>
+                    </div>
+
+                    <!-- Card 3: Creative -->
+                    <div class="skill-card p-8 rounded-xl border border-gray-200 bg-white group hover-trigger" data-cursor="Design">
+                        <div class="w-12 h-12 bg-black text-white rounded-full flex items-center justify-center mb-6 text-xl group-hover:rotate-12 transition-transform dark:bg-white dark:text-black">
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-anthropic" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M9.218 2h2.402L16 12.987h-2.402zM4.379 2h2.512l4.38 10.987H8.82l-.895-2.308h-4.58l-.896 2.307H0L4.38 2.001zm2.755 6.64L5.635 4.777 4.137 8.64z"/>
+</svg>
+
+                        </div>
+                        <h3 class="text-xl font-serif font-bold mb-3">Ai Automation</h3>
+                        <p class="text-sm text-gray-500 mb-4 leading-relaxed">
+                           AI Solutions Architect specializing in agentic workflows and multi-agent orchestration.
+                        </p>
+                        <ul class="text-xs font-mono text-gray-400 space-y-2">
+                            <li>+ Ai agents</li>
+                            <li>+ REG model traning</li>
+                            <li>+ Ai workflow building</li>
+                        </ul>
+                    </div>
+
+                    <!-- Card 4: Cloud & AI -->
+                    <div class="skill-card p-8 rounded-xl border border-gray-200 bg-white group hover-trigger" data-cursor="Cloud">
+                        <div class="w-12 h-12 bg-black text-white rounded-full flex items-center justify-center mb-6 text-xl group-hover:rotate-12 transition-transform dark:bg-white dark:text-black">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <h3 class="text-xl font-serif font-bold mb-3">Cloud & AI</h3>
+                        <p class="text-sm text-gray-500 mb-4 leading-relaxed">
+                            Leveraging Linux environments and Artificial Intelligence to automate workflows and solve complex problems.
+                        </p>
+                        <ul class="text-xs font-mono text-gray-400 space-y-2">
+                            <li>+ Linux Administration</li>
+                            <li>+ AI Utilization</li>
+                            <li>+ Cloud Computing</li>
+                        </ul>
+                    </div>
+
+                    <!-- Card 5: Content -->
+                    <div class="skill-card p-8 rounded-xl border border-gray-200 bg-white group hover-trigger" data-cursor="Type">
+                        <div class="w-12 h-12 bg-black text-white rounded-full flex items-center justify-center mb-6 text-xl group-hover:rotate-12 transition-transform dark:bg-white dark:text-black">
+                            <i class="fas fa-keyboard"></i>
+                        </div>
+                        <h3 class="text-xl font-serif font-bold mb-3">Content Services</h3>
+                        <p class="text-sm text-gray-500 mb-4 leading-relaxed">
+                            High-speed typing and transcription services. Creation of academic materials and coaching resources.
+                        </p>
+                        <ul class="text-xs font-mono text-gray-400 space-y-2">
+                            <li>+ Content Transcription</li>
+                            <li>+ Academic Preparation</li>
+                            <li>+ MS Office Suite</li>
+                        </ul>
+                    </div>
+
+                     <!-- Card 6: Multimedia -->
+                     <div class="skill-card p-8 rounded-xl border border-gray-200 bg-white group hover-trigger" data-cursor="Media">
+                        <div class="w-12 h-12 bg-black text-white rounded-full flex items-center justify-center mb-6 text-xl group-hover:rotate-12 transition-transform dark:bg-white dark:text-black">
+                            <i class="fas fa-headphones"></i>
+                        </div>
+                        <h3 class="text-xl font-serif font-bold mb-3">Multimedia</h3>
+                        <p class="text-sm text-gray-500 mb-4 leading-relaxed">
+                            Comprehensive audio and video editing capabilities for content creators and businesses.
+                        </p>
+                        <ul class="text-xs font-mono text-gray-400 space-y-2">
+                            <li>+ Audio Editing</li>
+                            <li>+ Photo Editing</li>
+                            <li>+ Video Production</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================
+             SYSTEM CONFIGURATION (Detailed)
+        ========================================== -->
+        <section id="system" class="section-padding bg-black text-white relative overflow-hidden">
+            <!-- Background Decor -->
+            <div class="absolute top-0 left-0 w-full h-full overflow-hidden opacity-20 pointer-events-none">
+                <div class="absolute top-20 -left-20 w-96 h-96 bg-blue-600 rounded-full blur-[120px]"></div>
+                <div class="absolute bottom-20 -right-20 w-96 h-96 bg-purple-600 rounded-full blur-[120px]"></div>
+            </div>
+
+            <div class="max-w-7xl mx-auto relative z-10 px-6 md:px-20">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-20 border-b border-gray-800 pb-8">
+                    <div>
+                        <span class="font-mono text-xs text-gray-400 uppercase tracking-widest mb-2 block">03 // Hardware</span>
+                        <h2 class="text-4xl md:text-6xl font-serif">System Architecture</h2>
+                    </div>
+                    <p class="max-w-md text-gray-400 text-sm mt-6 md:mt-0 text-right">
+                        My workflow is powered by a dual-environment setup, optimized for both creative rendering and secure server operations.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-12">
+                    <!-- System 1: Windows -->
+                    <div class="bg-white/5 backdrop-blur-md p-8 rounded-2xl border border-white/10 hover:border-white/30 transition-all group">
+                        <div class="flex justify-between items-start mb-8">
+                            <i class="fab fa-windows text-4xl text-blue-400 group-hover:scale-110 transition-transform"></i>
+                            <span class="px-3 py-1 bg-blue-500/20 text-blue-300 text-xs font-mono rounded-full border border-blue-500/30">PRIMARY STATION</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-6">Physical System</h3>
+                        
+                        <div class="space-y-4 font-mono text-sm text-gray-300">
+                            <div class="flex justify-between border-b border-white/5 pb-2">
+                                <span class="text-gray-500">CPU</span>
+                                <span>AMD Ryzen7 5700G</span>
+                            </div>
+                            <div class="flex justify-between border-b border-white/5 pb-2">
+                                <span class="text-gray-500">Clock Speed</span>
+                                <span>5.80GHz</span>
+                            </div>
+                            <div class="flex justify-between border-b border-white/5 pb-2">
+                                <span class="text-gray-500">Memory</span>
+                                <span>16 GB RAM</span>
+                            </div>
+                            <div class="flex justify-between pt-2">
+                                <span class="text-gray-500">Usage</span>
+                                <span class="text-right">Creative Suite, Rendering,<br>General Operations</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- System 2: Linux -->
+                    <div class="bg-white/5 backdrop-blur-md p-8 rounded-2xl border border-white/10 hover:border-white/30 transition-all group">
+                        <div class="flex justify-between items-start mb-8">
+                            <i class="fab fa-linux text-4xl text-yellow-400 group-hover:scale-110 transition-transform"></i>
+                            <span class="px-3 py-1 bg-yellow-500/20 text-yellow-300 text-xs font-mono rounded-full border border-yellow-500/30">CLOUD SERVER</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-6">Cloud Infrastructure</h3>
+                        
+                        <div class="space-y-4 font-mono text-sm text-gray-300">
+                            <div class="flex justify-between border-b border-white/5 pb-2">
+                                <span class="text-gray-500">CPU</span>
+                                <span>Intel® Xeon®</span>
+                            </div>
+                            <div class="flex justify-between border-b border-white/5 pb-2">
+                                <span class="text-gray-500">Clock Speed</span>
+                                <span>3.20GHz</span>
+                            </div>
+                            <div class="flex justify-between border-b border-white/5 pb-2">
+                                <span class="text-gray-500">Memory</span>
+                                <span>8 GB RAM</span>
+                            </div>
+                            <div class="flex justify-between pt-2">
+                                <span class="text-gray-500">Storage</span>
+                                <span class="text-right">95 GB Total<br><span class="text-xs text-gray-500">(42GB Available / 53GB Used)</span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Storage Visualizer -->
+                <div class="mt-12 p-6 bg-white/5 rounded-xl border border-white/10">
+                    <div class="flex justify-between text-xs font-mono text-gray-400 mb-2">
+                        <span>SERVER STORAGE ALLOCATION</span>
+                        <span>53GB / 95GB USED</span>
+                    </div>
+                    <div class="w-full h-4 bg-gray-800 rounded-full overflow-hidden flex">
+                        <div class="h-full bg-gradient-to-r from-blue-500 to-purple-500 w-[55%] relative group cursor-help">
+                            <div class="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-black text-white text-[10px] py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity">System Files & Tools</div>
+                        </div>
+                        <div class="h-full bg-gray-700 w-[45%]"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================
+             PROJECTS / HISTORY
+        ========================================== -->
+        <section id="work" class="section-padding px-6 md:px-20 bg-white">
+            <div class="max-w-7xl mx-auto">
+                <div class="flex flex-col md:flex-row gap-12">
+                    <!-- Sidebar -->
+                    <div class="md:w-1/3">
+                        <div class="sticky top-32">
+                            <span class="font-mono text-xs text-accent uppercase tracking-widest mb-2 block dark:text-gray-400">04 // Track Record</span>
+                            <h2 class="text-4xl font-serif mb-6">Selected Works</h2>
+                            <p class="text-gray-500 mb-8 text-sm leading-relaxed">
+                                A curation of projects spanning web development, brand identity, and academic resource management.
+                            </p>
+                            <a href="#contact" class="inline-flex items-center gap-2 text-sm font-bold border-b border-black pb-1 hover:text-gray-600 dark:border-white dark:hover:text-gray-300">
+                                Discuss a Project <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Projects List -->
+                    <div class="md:w-2/3 space-y-12">
+                        
+                        <!-- Project 1 -->
+                        <div class="group hover-trigger" data-cursor="View">
+                            <div class="overflow-hidden rounded-lg mb-4 aspect-video bg-gray-100 relative dark:bg-gray-800">
+                                <!-- Mockup CSS -->
+                                <div class="absolute inset-0 flex items-center justify-center bg-gray-200 group-hover:bg-gray-300 transition-colors dark:bg-gray-800 dark:group-hover:bg-gray-700">
+                                    <img src="./media/image.png" alt="" srcset="">
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h3 class="text-2xl font-serif font-bold group-hover:text-gray-600 transition-colors dark:group-hover:text-gray-300">E-commerce Development</h3>
+                                    <p class="text-sm text-gray-500 mt-2">Web Management & Creation</p>
+                                </div>
+                                <span class="px-3 py-1 border border-gray-200 rounded-full text-xs font-mono">2024</span>
+                            </div>
+                            <p class="mt-4 text-gray-600 text-sm leading-relaxed">
+                                Developed a fully functional website handling both front-end and back-end operations. Currently managing another active website, ensuring optimal performance, security patches, and user engagement metrics.
+                            </p>
+                        </div>
+
+                        <div class="line-separator"></div>
+
+                        <!-- Project 2 -->
+                        <div class="group hover-trigger" data-cursor="View">
+                            <div class="overflow-hidden rounded-lg mb-4 aspect-video bg-gray-100 relative dark:bg-gray-800">
+                                <div class="absolute inset-0 flex items-center justify-center bg-gray-200 group-hover:bg-gray-300 transition-colors dark:bg-gray-800 dark:group-hover:bg-gray-700">
+                                    <img src="./media/image1.png" alt="" srcset="">
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h3 class="text-2xl font-serif font-bold group-hover:text-gray-600 transition-colors dark:group-hover:text-gray-300">Ai workflows</h3>
+                                    <p class="text-sm text-gray-500 mt-2">UGC ads automation using ai and more</p>
+                                </div>
+                                <span class="px-3 py-1 border border-gray-200 rounded-full text-xs font-mono">2025</span>
+                            </div>
+                            <p class="mt-4 text-gray-600 text-sm leading-relaxed">
+                                Generate UGC ads with lifelike AI avatars. Choose from 500+ diverse looks and voices. Great for social campaigns, product videos, and brand stories.
+                            </p>
+                        </div>
+
+                         <div class="line-separator"></div>
+
+                        <!-- Project 3 -->
+                        <div class="group hover-trigger" data-cursor="View">
+                            <div class="overflow-hidden rounded-lg mb-4 aspect-video bg-gray-100 relative dark:bg-gray-800">
+                                <div class="absolute inset-0 flex items-center justify-center bg-gray-200 group-hover:bg-gray-300 transition-colors dark:bg-gray-800 dark:group-hover:bg-gray-700">
+                                    <img src="./media/image2.png" alt="" srcset="">
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h3 class="text-2xl font-serif font-bold group-hover:text-gray-600 transition-colors dark:group-hover:text-gray-300">Ai powerd Software</h3>
+                                    <p class="text-sm text-gray-500 mt-2">Ai moderators for facebook</p>
+                                </div>
+                                <span class="px-3 py-1 border border-gray-200 rounded-full text-xs font-mono">2025</span>
+                            </div>
+                            <p class="mt-4 text-gray-600 text-sm leading-relaxed">
+                                PagePilot is a smart Al assistant for Facebook Pages.
+When someone comments on a Page post, the
+software reads it instantly.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================
+             CONTACT SECTION
+        ========================================== -->
+        <section id="contact" class="py-32 px-6 md:px-20 bg-black text-white relative overflow-hidden">
+             <!-- Grid Background -->
+             <div class="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20"></div>
+             
+            <div class="max-w-4xl mx-auto text-center relative z-10">
+                <span class="font-mono text-xs text-gray-500 uppercase tracking-widest mb-6 block">05 // Communication</span>
+                
+                <h2 class="text-5xl md:text-8xl font-serif mb-12 hover:text-gray-300 transition-colors duration-500 cursor-pointer">
+                    Let's Talk.
+                </h2>
+
+                <div class="grid md:grid-cols-2 gap-8 text-left mb-16">
+                    <div class="p-8 border border-white/10 rounded-xl bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-colors">
+                        <h3 class="font-mono text-gray-400 text-xs mb-4 uppercase">Direct Line</h3>
+                        <div class="flex flex-col gap-2">
+                            <a href="tel:+8801781763345" class="text-2xl md:text-3xl font-bold hover:text-blue-400 transition-colors">017 81763345</a>
+                            <a href="tel:+8801781763345" class="text-xl md:text-2xl text-gray-400 hover:text-blue-400 transition-colors">017 81763345</a>
+                        </div>
+                    </div>
+
+                    <div class="p-8 border border-white/10 rounded-xl bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-colors">
+                        <h3 class="font-mono text-gray-400 text-xs mb-4 uppercase">Digital Mail</h3>
+                        <a href="mailto:Joy@gmail.com" class="text-2xl md:text-3xl font-bold hover:text-blue-400 transition-colors break-all">
+                            Joysutradharpc@gmail.com
+                        </a>
+                    </div>
+                </div>
+
+                <div class="flex justify-center gap-12 text-3xl">
+                    <a href="#" class="hover:scale-125 transition-transform duration-300 hover:text-blue-500"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="hover:scale-125 transition-transform duration-300 hover:text-pink-500"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="hover:scale-125 transition-transform duration-300 hover:text-green-500"><i class="fab fa-whatsapp"></i></a>
+                </div>
+
+                <footer class="mt-24 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-xs font-mono text-gray-600">
+                    <p>© 2025 MD. Joy Sutradhar. All Rights Reserved.</p>
+                    <p class="mt-2 md:mt-0">Designed & Engineered in Dhaka.</p>
+                </footer>
+            </div>
+        </section>
+    </main>
+
+    <!-- =========================================
+         JAVASCRIPT LOGIC
+    ========================================== -->
+    <script>
+        // Global Variables
+        let particlesMaterial; // Reference for dark/light mode toggle
+
+        // 0. THEME SWITCH LOGIC
+        const toggleTheme = (checkbox) => {
+            const body = document.body;
+            
+            // Logic: Checked = Day/Light, Unchecked = Night/Dark
+            if (checkbox.checked) {
+                // LIGHT MODE
+                body.classList.remove('dark-mode');
+                // Update 3D particles to black
+                if (particlesMaterial) particlesMaterial.color.setHex(0x1a1a1a);
+                localStorage.setItem('theme', 'light');
+            } else {
+                // DARK MODE
+                body.classList.add('dark-mode');
+                // Update 3D particles to white
+                if (particlesMaterial) particlesMaterial.color.setHex(0xffffff);
+                localStorage.setItem('theme', 'dark');
+            }
+        };
+
+        const initTheme = () => {
+            const savedTheme = localStorage.getItem('theme');
+            const checkbox = document.getElementById('checkbox');
+            
+            // Default to Light (Day) if no save, or if saved is 'light'
+            // Checked = Light
+            if (savedTheme === 'dark') {
+                checkbox.checked = false;
+                document.body.classList.add('dark-mode');
+            } else {
+                checkbox.checked = true;
+                document.body.classList.remove('dark-mode');
+            }
+        };
+
+        // 1. PRELOADER LOGIC
+        const initPreloader = () => {
+            const tl = gsap.timeline();
+
+            // Animate Bar
+            tl.to("#loader-progress", {
+                width: "100%",
+                duration: 1.5,
+                ease: "power2.inOut"
+            })
+            // Move Text Up
+            .to("#loader-name", {
+                y: 0,
+                duration: 1,
+                ease: "power4.out"
+            }, "-=0.5")
+            .to("#loader-status", {
+                opacity: 0,
+                duration: 0.5
+            })
+            // Fade Out Loader
+            .to("#loader", {
+                yPercent: -100,
+                duration: 1.2,
+                ease: "power4.inOut",
+                delay: 0.2
+            })
+            // Animate Hero Elements In
+            .to(".hero-text", {
+                y: 0,
+                opacity: 1,
+                stagger: 0.1,
+                duration: 1,
+                ease: "power3.out"
+            }, "-=0.8");
+        };
+
+        // 2. CUSTOM CURSOR LOGIC
+        const initCursor = () => {
+            const cursorDot = document.getElementById("cursor-dot");
+            const cursorOutline = document.getElementById("cursor-outline");
+            
+            window.addEventListener("mousemove", (e) => {
+                const posX = e.clientX;
+                const posY = e.clientY;
+
+                // Dot follows instantly
+                cursorDot.style.left = `${posX}px`;
+                cursorDot.style.top = `${posY}px`;
+
+                // Outline follows with delay (using animation api)
+                cursorOutline.animate({
+                    left: `${posX}px`,
+                    top: `${posY}px`
+                }, { duration: 500, fill: "forwards" });
+            });
+
+            // Hover Effects
+            const hoverTriggers = document.querySelectorAll(".hover-trigger");
+            hoverTriggers.forEach(trigger => {
+                trigger.addEventListener("mouseenter", () => {
+                    document.body.classList.add("hovering");
+                    // Optional: Change text inside cursor if needed
+                });
+                trigger.addEventListener("mouseleave", () => {
+                    document.body.classList.remove("hovering");
+                });
+            });
+        };
+
+        // 3. THREE.JS BACKGROUND (Particle Mesh)
+        const initThreeJS = () => {
+            const container = document.getElementById('canvas-container');
+            const scene = new THREE.Scene();
+            // Light fog for depth
+            scene.fog = new THREE.FogExp2(0xffffff, 0.002);
+
+            const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+            const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+            
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2)); // Performance optimization
+            container.appendChild(renderer.domElement);
+
+            // Create Particles
+            const geometry = new THREE.BufferGeometry();
+            const particlesCount = 700;
+            const posArray = new Float32Array(particlesCount * 3);
+
+            for(let i = 0; i < particlesCount * 3; i++) {
+                // Spread particles wide
+                posArray[i] = (Math.random() - 0.5) * 15;
+            }
+
+            geometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
+
+            // Material - Check current theme for initial color
+            const isDark = document.body.classList.contains('dark-mode');
+            particlesMaterial = new THREE.PointsMaterial({
+                size: 0.02,
+                color: isDark ? 0xffffff : 0x1a1a1a, // Dark particles
+                transparent: true,
+                opacity: 0.8,
+            });
+
+            // Mesh
+            const particlesMesh = new THREE.Points(geometry, particlesMaterial);
+            scene.add(particlesMesh);
+
+            // Connecting Lines (Optional - simplified for performance)
+            // We stick to points for a "digital dust" feel to keep it smooth
+
+            camera.position.z = 2;
+
+            // Mouse Interaction
+            let mouseX = 0;
+            let mouseY = 0;
+
+            document.addEventListener('mousemove', (event) => {
+                mouseX = event.clientX / window.innerWidth - 0.5;
+                mouseY = event.clientY / window.innerHeight - 0.5;
+            });
+
+            // Animation Loop
+            const clock = new THREE.Clock();
+
+            const animate = () => {
+                const elapsedTime = clock.getElapsedTime();
+
+                // Rotate entire mesh slowly
+                particlesMesh.rotation.y = elapsedTime * 0.05;
+                particlesMesh.rotation.x = mouseY * 0.5;
+                particlesMesh.rotation.y += mouseX * 0.5;
+
+                renderer.render(scene, camera);
+                requestAnimationFrame(animate);
+            };
+
+            animate();
+
+            // Resize Handler
+            window.addEventListener('resize', () => {
+                camera.aspect = window.innerWidth / window.innerHeight;
+                camera.updateProjectionMatrix();
+                renderer.setSize(window.innerWidth, window.innerHeight);
+            });
+        };
+
+        // 4. SMOOTH SCROLLING (Lenis)
+        const initSmoothScroll = () => {
+            const lenis = new Lenis({
+                duration: 1.2,
+                easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+                direction: 'vertical',
+                gestureDirection: 'vertical',
+                smooth: true,
+                mouseMultiplier: 1,
+                smoothTouch: false,
+                touchMultiplier: 2,
+            });
+
+            function raf(time) {
+                lenis.raf(time);
+                requestAnimationFrame(raf);
+            }
+
+            requestAnimationFrame(raf);
+
+            // Connect Lenis to ScrollTrigger
+            lenis.on('scroll', ScrollTrigger.update);
+            gsap.ticker.add((time) => {
+                lenis.raf(time * 1000);
+            });
+            gsap.ticker.lagSmoothing(0);
+        };
+
+        // 5. SCROLL ANIMATIONS (ScrollTrigger)
+        const initScrollAnimations = () => {
+            gsap.registerPlugin(ScrollTrigger);
+
+            // Reveal Images
+            gsap.utils.toArray('.reveal-wrap').forEach(wrap => {
+                let img = wrap.querySelector('.reveal-img');
+                let overlay = wrap.querySelector('.reveal-overlay');
+                
+                let tl = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: wrap,
+                        start: "top 80%",
+                    }
+                });
+
+                tl.to(overlay, {
+                    scaleY: 0,
+                    transformOrigin: "bottom",
+                    duration: 1,
+                    ease: "power3.inOut"
+                })
+                .to(img, {
+                    scale: 1,
+                    duration: 1.5,
+                    ease: "power3.out"
+                }, "-=1");
+            });
+
+            // Cards Stagger - FIXED TRIGGER
+            gsap.from(".skill-card", {
+                scrollTrigger: {
+                    trigger: "#skills-grid", // Trigger on the grid itself, not the parent section
+                    start: "top 85%", // Trigger earlier (when top of grid hits 85% of viewport height)
+                    toggleActions: "play none none reverse"
+                },
+                y: 50, // Reduced movement distance
+                opacity: 0,
+                stagger: 0.1,
+                duration: 0.8,
+                ease: "power3.out",
+                clearProps: "all" // Ensures opacity is removed after animation so they stay visible
+            });
+        };
+
+        // 6. MOBILE MENU
+        const initMobileMenu = () => {
+            const toggle = document.getElementById('menu-toggle');
+            const close = document.getElementById('menu-close');
+            const menu = document.getElementById('mobile-menu');
+            const links = document.querySelectorAll('.mobile-link');
+
+            const openMenu = () => menu.classList.remove('translate-x-full');
+            const closeMenu = () => menu.classList.add('translate-x-full');
+
+            toggle.addEventListener('click', openMenu);
+            close.addEventListener('click', closeMenu);
+            links.forEach(link => link.addEventListener('click', closeMenu));
+        };
+
+        // INITIALIZATION SEQUENCE
+        document.addEventListener('DOMContentLoaded', () => {
+            initTheme();
+            initPreloader();
+            initCursor();
+            initThreeJS();
+            initSmoothScroll();
+            initScrollAnimations();
+            initMobileMenu();
+        });
+
+    </script>
 </body>
 </html>
