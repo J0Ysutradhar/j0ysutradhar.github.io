@@ -3,72 +3,643 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Services by Joy Sutradhar: Django app development, SaaS development, and Python development for startups and businesses." />
-  <meta name="robots" content="index,follow" />
-  <link rel="canonical" href="https://joysutradhar.pro.bd/services/" />
-  <title>Services | Joy Sutradhar</title>
+  <meta name="description" content="Joy Sutradhar is a backend engineer, Django developer, educator, and automation builder in Dhaka, Bangladesh. Explore projects, skills, experience, and contact details." />
+  <meta name="keywords" content="Joy Sutradhar, backend engineer, Django developer, Python developer, automation engineer, educator, Dhaka Bangladesh, portfolio" />
+  <meta name="author" content="Joy Sutradhar" />
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+  <meta name="theme-color" content="#000000" />
+  <link rel="canonical" href="https://joysutradhar.pro.bd/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Joy Sutradhar Portfolio" />
+  <meta property="og:title" content="Joy Sutradhar | Backend Engineer, Django Developer & Automation Builder" />
+  <meta property="og:description" content="Portfolio of Joy Sutradhar, a backend engineer and educator in Dhaka building Django, Python, automation, and AI-powered products." />
+  <meta property="og:url" content="https://joysutradhar.pro.bd/" />
+  <meta property="og:image" content="https://joysutradhar.pro.bd/og-image.svg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="en_US" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Joy Sutradhar | Backend Engineer, Django Developer & Automation Builder" />
+  <meta name="twitter:description" content="Portfolio of Joy Sutradhar, a backend engineer and educator in Dhaka building Django, Python, automation, and AI-powered products." />
+  <meta name="twitter:image" content="https://joysutradhar.pro.bd/og-image.svg" />
+  <title>Joy Sutradhar | Backend Engineer, Django Developer & Automation Builder in Dhaka</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>tailwind.config={theme:{extend:{colors:{nvidia:{green:'#76b900',black:'#000000',white:'#ffffff',soft:'#f7f7f7',hairline:'#cccccc',body:'#1a1a1a',mute:'#757575'}},borderRadius:{sm:'2px'}}}};</script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            nvidia: {
+              green: '#76b900',
+              greenDark: '#5a8d00',
+              black: '#000000',
+              white: '#ffffff',
+              soft: '#f7f7f7',
+              hairline: '#cccccc',
+              body: '#1a1a1a',
+              mute: '#757575'
+            }
+          },
+          boxShadow: {
+            none: 'none'
+          },
+          borderRadius: {
+            none: '0px',
+            sm: '2px'
+          },
+          letterSpacing: {
+            tighter: '-0.03em'
+          }
+        }
+      }
+    };
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
-  <style>body{font-family:Inter,Arial,Helvetica,sans-serif}</style>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', Arial, Helvetica, sans-serif;
+      background: #ffffff;
+      color: #1a1a1a;
+    }
+
+    ::selection {
+      background: #76b900;
+      color: #000000;
+    }
+
+    .text-balance {
+      text-wrap: balance;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+  </style>
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@graph": [
         {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {"@type":"ListItem","position":1,"name":"Home","item":"https://joysutradhar.pro.bd/"},
-            {"@type":"ListItem","position":2,"name":"Services","item":"https://joysutradhar.pro.bd/services/"}
-          ]
+          "@type": "Person",
+          "@id": "https://joysutradhar.pro.bd/#person",
+          "name": "Joy Sutradhar",
+          "jobTitle": ["Backend Engineer", "Django Developer", "Educator", "Automation Builder"],
+          "description": "Backend engineer and educator from Dhaka, Bangladesh, focused on Django, Python, automation, AI tools, and product building.",
+          "email": "mailto:joysutradharpc@gmail.com",
+          "url": "https://joysutradhar.pro.bd/",
+          "sameAs": [
+            "https://github.com/J0Ysutradhar",
+            "https://www.linkedin.com/in/j0ysutradhar/",
+            "https://www.facebook.com/J0ySutradhar",
+            "https://dev.to/joy_sutrdhar",
+            "https://www.udemy.com/user/joy-js/",
+            "https://www.fiverr.com/joyaisolution",
+            "https://www.instagram.com/joysutradhar.eth/"
+          ],
+          "knowsAbout": [
+            "Python",
+            "Django",
+            "Django REST Framework",
+            "PostgreSQL",
+            "Redis",
+            "REST API design",
+            "automation",
+            "generative AI",
+            "LLM integration"
+          ],
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Dhaka",
+            "addressCountry": "BD"
+          }
         },
         {
-          "@type": "ItemList",
-          "name": "Joy Sutradhar services",
-          "itemListElement": [
-            {"@type":"ListItem","position":1,"url":"https://joysutradhar.pro.bd/services/django-app-development.html"},
-            {"@type":"ListItem","position":2,"url":"https://joysutradhar.pro.bd/services/saas-development.html"},
-            {"@type":"ListItem","position":3,"url":"https://joysutradhar.pro.bd/services/python-development.html"}
+          "@type": "WebSite",
+          "@id": "https://joysutradhar.pro.bd/#website",
+          "url": "https://joysutradhar.pro.bd/",
+          "name": "Joy Sutradhar Portfolio",
+          "publisher": {
+            "@id": "https://joysutradhar.pro.bd/#person"
+          },
+          "inLanguage": "en"
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://joysutradhar.pro.bd/#webpage",
+          "url": "https://joysutradhar.pro.bd/",
+          "name": "Joy Sutradhar | Backend Engineer, Django Developer & Automation Builder in Dhaka",
+          "isPartOf": {
+            "@id": "https://joysutradhar.pro.bd/#website"
+          },
+          "about": {
+            "@id": "https://joysutradhar.pro.bd/#person"
+          },
+          "description": "Portfolio website for Joy Sutradhar, a backend engineer and educator in Dhaka building Django, Python, automation, and AI-powered products.",
+          "inLanguage": "en"
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://joysutradhar.pro.bd/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Who is Joy Sutradhar?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Joy Sutradhar is a backend engineer, Django developer, educator, and automation builder from Dhaka, Bangladesh."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What does Joy Sutradhar specialize in?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Joy Sutradhar specializes in Python, Django, Django REST Framework, PostgreSQL, Redis, automation systems, and AI-powered tools."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How can I contact Joy Sutradhar for a project?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "You can contact Joy Sutradhar at joysutradharpc@gmail.com or through the portfolio website contact links."
+              }
+            }
           ]
         }
       ]
     }
   </script>
 </head>
-<body class="bg-white text-nvidia-body antialiased">
-  <main class="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
-    <nav aria-label="Breadcrumb" class="text-sm text-nvidia-mute">
-      <a href="../index.html" class="font-semibold uppercase tracking-[0.2em] text-nvidia-black">Home</a>
-      <span class="mx-2">/</span>
-      <span class="font-semibold uppercase tracking-[0.2em] text-nvidia-mute">Services</span>
-    </nav>
-    <p class="mt-4 text-[11px] font-bold uppercase tracking-[0.3em] text-nvidia-green">Services</p>
-    <h1 class="mt-3 text-4xl font-extrabold tracking-tight text-nvidia-black sm:text-5xl">Django apps, SaaS products, and Python development.</h1>
-    <p class="mt-4 max-w-3xl text-base leading-7">This page groups the core services into a clear structure so users and search engines can immediately understand what Joy Sutradhar offers.</p>
-
-    <div class="mt-10 grid gap-6 lg:grid-cols-3">
-      <a href="django-app-development.html" class="border border-nvidia-hairline bg-nvidia-soft p-6 transition-transform hover:-translate-y-1">
-        <div class="text-[11px] font-bold uppercase tracking-[0.28em] text-nvidia-mute">Django app development</div>
-        <h2 class="mt-2 text-2xl font-bold text-nvidia-black">Django App Development</h2>
-        <p class="mt-4 text-sm leading-7">Backend architecture, admin tools, APIs, and scalable app foundations.</p>
-      </a>
-      <a href="saas-development.html" class="border border-nvidia-hairline bg-nvidia-soft p-6 transition-transform hover:-translate-y-1">
-        <div class="text-[11px] font-bold uppercase tracking-[0.28em] text-nvidia-mute">SaaS development</div>
-        <h2 class="mt-2 text-2xl font-bold text-nvidia-black">SaaS Development</h2>
-        <p class="mt-4 text-sm leading-7">Subscription-ready products with clean user flows and operational structure.</p>
-      </a>
-      <a href="python-development.html" class="border border-nvidia-hairline bg-nvidia-soft p-6 transition-transform hover:-translate-y-1">
-        <div class="text-[11px] font-bold uppercase tracking-[0.28em] text-nvidia-mute">Python development</div>
-        <h2 class="mt-2 text-2xl font-bold text-nvidia-black">Python Development</h2>
-        <p class="mt-4 text-sm leading-7">Automation, APIs, internal tools, and practical problem solving in Python.</p>
-      </a>
+<body class="antialiased">
+  <div id="mobile-menu" class="fixed inset-0 z-50 hidden bg-black/90 backdrop-blur-sm">
+    <div class="ml-auto flex h-full w-full max-w-sm flex-col border-l border-white/15 bg-black p-6 text-white">
+      <div class="flex items-center justify-between">
+        <div>
+          <div class="text-[11px] font-bold uppercase tracking-[0.28em] text-white/55">Navigation</div>
+          <div class="mt-1 text-lg font-bold">Joy Sutradhar</div>
+        </div>
+        <button type="button" id="mobile-close" class="border border-white/20 px-3 py-2 text-xs font-bold uppercase tracking-[0.18em]">Close</button>
+      </div>
+      <nav class="mt-10 flex flex-col gap-3 text-sm font-bold uppercase tracking-[0.24em] text-white/80">
+        <a class="border border-white/15 px-4 py-4" href="#work">Work</a>
+        <a class="border border-white/15 px-4 py-4" href="#skills">Capabilities</a>
+        <a class="border border-white/15 px-4 py-4" href="#experience">Experience</a>
+        <a class="border border-white/15 px-4 py-4" href="#services">Services</a>
+        <a class="border border-white/15 px-4 py-4" href="#insights">Insights</a>
+        <a class="border border-white/15 px-4 py-4" href="#contact">Contact</a>
+      </nav>
+      <a href="mailto:joysutradharpc@gmail.com" class="mt-auto inline-flex items-center justify-center border border-nvidia-green bg-nvidia-green px-4 py-4 text-sm font-bold uppercase tracking-[0.2em] text-black">Hire Me</a>
     </div>
+  </div>
 
-    <div class="mt-10">
-      <a href="../index.html" class="inline-flex items-center border border-nvidia-green bg-nvidia-green px-4 py-3 text-sm font-bold uppercase tracking-[0.2em] text-black">Back to portfolio</a>
+  <header class="sticky top-0 z-40 border-b border-nvidia-hairline bg-nvidia-black text-white" role="banner">
+    <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8">
+      <a href="#home" class="flex min-w-0 items-center gap-3">
+        <span class="inline-flex h-3 w-3 shrink-0 bg-nvidia-green"></span>
+        <div class="min-w-0">
+          <div class="truncate text-[11px] font-bold uppercase tracking-[0.28em] text-white/70">Joy Sutradhar</div>
+          <div class="truncate text-sm font-bold tracking-tight text-white">Backend Engineer & Educator</div>
+        </div>
+      </a>
+
+      <nav class="hidden items-center gap-7 text-[12px] font-bold uppercase tracking-[0.24em] text-white/75 md:flex" aria-label="Primary navigation">
+        <a class="transition-colors hover:text-nvidia-green" href="#work">Work</a>
+        <a class="transition-colors hover:text-nvidia-green" href="#skills">Capabilities</a>
+        <a class="transition-colors hover:text-nvidia-green" href="#experience">Experience</a>
+        <a class="transition-colors hover:text-nvidia-green" href="#services">Services</a>
+        <a class="transition-colors hover:text-nvidia-green" href="#insights">Insights</a>
+        <a class="transition-colors hover:text-nvidia-green" href="#contact">Contact</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="mailto:joysutradharpc@gmail.com" class="hidden items-center border border-nvidia-green bg-nvidia-green px-4 py-3 text-[12px] font-bold uppercase tracking-[0.18em] text-black transition-colors hover:bg-nvidia-greenDark sm:inline-flex">
+          Hire Me
+        </a>
+        <button type="button" id="mobile-open" class="inline-flex items-center border border-white/20 px-3 py-3 text-[11px] font-bold uppercase tracking-[0.18em] text-white md:hidden">
+          Menu
+        </button>
+      </div>
     </div>
+  </header>
+
+  <main id="home">
+    <section class="border-b border-nvidia-hairline bg-nvidia-black text-white" aria-labelledby="hero-title">
+      <div class="mx-auto grid max-w-7xl gap-8 px-4 py-12 sm:px-6 sm:py-16 lg:grid-cols-[1.15fr_0.85fr] lg:gap-12 lg:px-8 lg:py-20">
+        <div class="max-w-3xl">
+          <p class="sr-only">Portfolio homepage for Joy Sutradhar, a backend engineer in Dhaka, Bangladesh.</p>
+          <div class="inline-flex items-center border border-white/20 px-3 py-2 text-[11px] font-bold uppercase tracking-[0.28em] text-white/70">
+            Software Developer · Backend Engineer · Educator
+          </div>
+          <h1 id="hero-title" class="mt-5 max-w-4xl text-4xl font-extrabold leading-[0.95] tracking-tight text-balance sm:text-5xl lg:text-6xl xl:text-7xl">
+            I build clean products that feel credible, calm, and engineered with intent.
+          </h1>
+          <p class="mt-5 max-w-2xl text-base leading-7 text-white/75 sm:text-lg">
+            I’m Joy Sutradhar from Dhaka, Bangladesh. I work on backend systems, automation, AI tools, and product experiences that are easy to understand, easy to trust, and built to last.
+          </p>
+
+          <div class="mt-8 flex flex-col gap-4 sm:flex-row">
+            <a href="#work" class="inline-flex items-center justify-center border border-nvidia-green bg-nvidia-green px-6 py-4 text-sm font-bold uppercase tracking-[0.22em] text-black transition-colors hover:bg-nvidia-greenDark">
+              See Work
+            </a>
+            <a href="#contact" class="inline-flex items-center justify-center border border-white px-6 py-4 text-sm font-bold uppercase tracking-[0.22em] text-white transition-colors hover:border-nvidia-green hover:text-nvidia-green">
+              Contact Me
+            </a>
+          </div>
+
+          <div class="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+            <div class="border border-white/15 bg-white/[0.03] p-4">
+              <div class="text-[11px] font-bold uppercase tracking-[0.24em] text-white/55">Focus</div>
+              <div class="mt-2 text-sm font-semibold text-white">Backend + automation</div>
+            </div>
+            <div class="border border-white/15 bg-white/[0.03] p-4">
+              <div class="text-[11px] font-bold uppercase tracking-[0.24em] text-white/55">Style</div>
+              <div class="mt-2 text-sm font-semibold text-white">Minimal, premium, technical</div>
+            </div>
+            <div class="border border-white/15 bg-white/[0.03] p-4">
+              <div class="text-[11px] font-bold uppercase tracking-[0.24em] text-white/55">Strength</div>
+              <div class="mt-2 text-sm font-semibold text-white">I ship end-to-end</div>
+            </div>
+            <div class="border border-white/15 bg-white/[0.03] p-4">
+              <div class="text-[11px] font-bold uppercase tracking-[0.24em] text-white/55">Trust</div>
+              <div class="mt-2 text-sm font-semibold text-white">Founder + educator</div>
+            </div>
+          </div>
+        </div>
+
+        <aside class="relative">
+          <div class="absolute left-0 top-0 h-3 w-3 bg-nvidia-green"></div>
+          <div class="border border-white/15 bg-white/[0.04] p-6 sm:p-7 lg:p-8">
+            <div class="text-[11px] font-bold uppercase tracking-[0.3em] text-white/60">Quick profile</div>
+            <div class="mt-5 space-y-4">
+              <div class="flex items-start justify-between gap-4 border-b border-white/10 pb-4">
+                <span class="text-sm font-semibold text-white/72">Location</span>
+                <span class="text-sm font-bold text-white">Dhaka, Bangladesh</span>
+              </div>
+              <div class="flex items-start justify-between gap-4 border-b border-white/10 pb-4">
+                <span class="text-sm font-semibold text-white/72">Education</span>
+                <span class="text-sm font-bold text-white text-right">B.Sc. CSE</span>
+              </div>
+              <div class="flex items-start justify-between gap-4 border-b border-white/10 pb-4">
+                <span class="text-sm font-semibold text-white/72">Core stack</span>
+                <span class="text-sm font-bold text-white text-right">Python, Django, PostgreSQL, Redis</span>
+              </div>
+              <div class="flex items-start justify-between gap-4">
+                <span class="text-sm font-semibold text-white/72">What I bring</span>
+                <span class="text-sm font-bold text-white text-right">Builder mindset with clear communication</span>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="border-b border-nvidia-hairline bg-white px-4 py-10 sm:px-6 lg:px-8" aria-labelledby="snapshot-title">
+      <div class="mx-auto grid max-w-7xl gap-4 sm:grid-cols-2 xl:grid-cols-4">
+        <div class="border border-nvidia-hairline bg-nvidia-soft p-5">
+          <h2 id="snapshot-title" class="sr-only">Professional snapshot</h2>
+          <p class="text-[11px] font-bold uppercase tracking-[0.28em] text-nvidia-mute">Current role</p>
+          <div class="mt-2 text-base font-bold text-nvidia-body">Founder & Lead Developer</div>
+        </div>
+        <div class="border border-nvidia-hairline bg-nvidia-soft p-5">
+          <div class="text-[11px] font-bold uppercase tracking-[0.28em] text-nvidia-mute">Main toolset</div>
+          <div class="mt-2 text-base font-bold text-nvidia-body">Django, DRF, PostgreSQL, Redis</div>
+        </div>
+        <div class="border border-nvidia-hairline bg-nvidia-soft p-5">
+          <div class="text-[11px] font-bold uppercase tracking-[0.28em] text-nvidia-mute">Working style</div>
+          <div class="mt-2 text-base font-bold text-nvidia-body">Technical, calm, product-minded</div>
+        </div>
+        <div class="border border-nvidia-hairline bg-nvidia-soft p-5">
+          <div class="text-[11px] font-bold uppercase tracking-[0.28em] text-nvidia-mute">Outcome</div>
+          <div class="mt-2 text-base font-bold text-nvidia-body">Systems that people trust quickly</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="work" class="bg-white px-4 py-16 sm:px-6 lg:px-8 lg:py-24" aria-labelledby="work-title">
+      <div class="mx-auto max-w-7xl">
+        <div class="max-w-3xl">
+          <div class="text-[11px] font-bold uppercase tracking-[0.3em] text-nvidia-green">Selected work</div>
+          <h2 id="work-title" class="mt-3 text-3xl font-extrabold tracking-tight text-nvidia-black sm:text-4xl lg:text-5xl">A short list of backend, automation, and AI projects.</h2>
+          <p class="mt-4 max-w-2xl text-base leading-7 text-nvidia-body sm:text-lg">These projects show what I care about most: practical value, strong structure, and a clean user experience that doesn’t get in the way of the work.</p>
+        </div>
+
+        <div class="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+          <article class="relative border border-nvidia-hairline bg-white p-6">
+            <span class="absolute left-0 top-0 h-3 w-3 bg-nvidia-green"></span>
+            <div class="text-[11px] font-bold uppercase tracking-[0.28em] text-nvidia-mute">SaaS</div>
+            <h3 class="mt-2 text-xl font-bold tracking-tight text-nvidia-black">PagePilot</h3>
+            <p class="mt-4 text-sm leading-7 text-nvidia-body">Facebook Page automation with scheduling, analytics, and workflow triggers.</p>
+            <p class="mt-4 text-[11px] font-bold uppercase tracking-[0.18em] text-nvidia-mute">Django · PostgreSQL · Redis · n8n</p>
+          </article>
+
+          <article class="relative border border-nvidia-hairline bg-white p-6">
+            <span class="absolute left-0 top-0 h-3 w-3 bg-nvidia-green"></span>
+            <div class="text-[11px] font-bold uppercase tracking-[0.28em] text-nvidia-mute">AI</div>
+            <h3 class="mt-2 text-xl font-bold tracking-tight text-nvidia-black">Clonify</h3>
+            <p class="mt-4 text-sm leading-7 text-nvidia-body">Voice cloning and text-to-speech application built around a simple, understandable flow.</p>
+            <p class="mt-4 text-[11px] font-bold uppercase tracking-[0.18em] text-nvidia-mute">Flask · APIs · TTS · Voice AI</p>
+          </article>
+
+          <article class="relative border border-nvidia-hairline bg-white p-6">
+            <span class="absolute left-0 top-0 h-3 w-3 bg-nvidia-green"></span>
+            <div class="text-[11px] font-bold uppercase tracking-[0.28em] text-nvidia-mute">Commerce</div>
+            <h3 class="mt-2 text-xl font-bold tracking-tight text-nvidia-black">FlixHUB</h3>
+            <p class="mt-4 text-sm leading-7 text-nvidia-body">Lightweight e-commerce platform with catalog, cart, and checkout flow.</p>
+            <p class="mt-4 text-[11px] font-bold uppercase tracking-[0.18em] text-nvidia-mute">Tailwind · PostgreSQL · Product UI</p>
+          </article>
+
+          <article class="relative border border-nvidia-hairline bg-white p-6">
+            <span class="absolute left-0 top-0 h-3 w-3 bg-nvidia-green"></span>
+            <div class="text-[11px] font-bold uppercase tracking-[0.28em] text-nvidia-mute">Privacy</div>
+            <h3 class="mt-2 text-xl font-bold tracking-tight text-nvidia-black">MyPic</h3>
+            <p class="mt-4 text-sm leading-7 text-nvidia-body">Secure peer-to-peer image sharing designed around trust and control.</p>
+            <p class="mt-4 text-[11px] font-bold uppercase tracking-[0.18em] text-nvidia-mute">P2P · Security · Sharing</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="border-y border-nvidia-hairline bg-nvidia-soft px-4 py-16 sm:px-6 lg:px-8 lg:py-24" aria-labelledby="skills-title">
+      <div class="mx-auto max-w-7xl">
+        <div class="max-w-3xl">
+          <div class="text-[11px] font-bold uppercase tracking-[0.3em] text-nvidia-green">Capabilities</div>
+          <h2 id="skills-title" class="mt-3 text-3xl font-extrabold tracking-tight text-nvidia-black sm:text-4xl lg:text-5xl">Backend development, Django, automation, AI, and teaching.</h2>
+          <p class="mt-4 max-w-2xl text-base leading-7 text-nvidia-body sm:text-lg">People trust work that feels structured. I combine backend depth, automation, AI integration, and teaching so the result feels clear from the first glance.</p>
+        </div>
+
+        <div class="mt-10 grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
+          <div class="border border-nvidia-hairline bg-white p-6">
+            <div class="text-[11px] font-bold uppercase tracking-[0.28em] text-nvidia-mute">Backend</div>
+            <h3 class="mt-3 text-xl font-bold text-nvidia-black">Reliable systems</h3>
+            <p class="mt-3 text-sm leading-7 text-nvidia-body">Django, DRF, PostgreSQL, Redis, REST APIs, and practical architecture decisions.</p>
+          </div>
+          <div class="border border-nvidia-hairline bg-white p-6">
+            <div class="text-[11px] font-bold uppercase tracking-[0.28em] text-nvidia-mute">Automation</div>
+            <h3 class="mt-3 text-xl font-bold text-nvidia-black">Less repetition</h3>
+            <p class="mt-3 text-sm leading-7 text-nvidia-body">n8n, Selenium, PyAutoGUI, and scraping to remove repetitive work.</p>
+          </div>
+          <div class="border border-nvidia-hairline bg-white p-6">
+            <div class="text-[11px] font-bold uppercase tracking-[0.28em] text-nvidia-mute">AI</div>
+            <h3 class="mt-3 text-xl font-bold text-nvidia-black">Practical intelligence</h3>
+            <p class="mt-3 text-sm leading-7 text-nvidia-body">Generative AI and LLM integration used with purpose, not decoration.</p>
+          </div>
+          <div class="border border-nvidia-hairline bg-white p-6">
+            <div class="text-[11px] font-bold uppercase tracking-[0.28em] text-nvidia-mute">Teaching</div>
+            <h3 class="mt-3 text-xl font-bold text-nvidia-black">Clear explanation</h3>
+            <p class="mt-3 text-sm leading-7 text-nvidia-body">I explain complex work well, which makes the product easier to trust.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="bg-white px-4 py-16 sm:px-6 lg:px-8 lg:py-24" aria-labelledby="services-title">
+      <div class="mx-auto max-w-7xl">
+        <div class="max-w-3xl">
+          <div class="text-[11px] font-bold uppercase tracking-[0.3em] text-nvidia-green">Services</div>
+          <h2 id="services-title" class="mt-3 text-3xl font-extrabold tracking-tight text-nvidia-black sm:text-4xl lg:text-5xl">Focused services for Django apps, SaaS, and Python development.</h2>
+          <p class="mt-4 max-w-2xl text-base leading-7 text-nvidia-body sm:text-lg">The service pages are built to match real search intent and answer the questions people ask before hiring.</p>
+        </div>
+
+        <div class="mt-10 grid gap-6 lg:grid-cols-3">
+          <a href="services/django-app-development.html" class="border border-nvidia-hairline bg-nvidia-soft p-6 transition-transform hover:-translate-y-1">
+            <div class="text-[11px] font-bold uppercase tracking-[0.28em] text-nvidia-mute">Django app development</div>
+            <h3 class="mt-2 text-2xl font-bold tracking-tight text-nvidia-black">Build Django apps with clean architecture</h3>
+            <p class="mt-4 text-sm leading-7 text-nvidia-body">For startups and founders who want a reliable backend, admin flow, and scalable product base.</p>
+          </a>
+          <a href="services/saas-development.html" class="border border-nvidia-hairline bg-nvidia-soft p-6 transition-transform hover:-translate-y-1">
+            <div class="text-[11px] font-bold uppercase tracking-[0.28em] text-nvidia-mute">SaaS development</div>
+            <h3 class="mt-2 text-2xl font-bold tracking-tight text-nvidia-black">Launch premium SaaS products faster</h3>
+            <p class="mt-4 text-sm leading-7 text-nvidia-body">For recurring products that need authentication, workflows, billing logic, and user trust.</p>
+          </a>
+          <a href="services/python-development.html" class="border border-nvidia-hairline bg-nvidia-soft p-6 transition-transform hover:-translate-y-1">
+            <div class="text-[11px] font-bold uppercase tracking-[0.28em] text-nvidia-mute">Python development</div>
+            <h3 class="mt-2 text-2xl font-bold tracking-tight text-nvidia-black">Python development for automation and tools</h3>
+            <p class="mt-4 text-sm leading-7 text-nvidia-body">For projects that need scripts, automation, APIs, and practical internal tooling.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="bg-white px-4 py-16 sm:px-6 lg:px-8 lg:py-24" aria-labelledby="experience-title">
+      <div class="mx-auto max-w-7xl">
+        <div class="grid gap-10 lg:grid-cols-[0.85fr_1.15fr]">
+          <div>
+            <div class="text-[11px] font-bold uppercase tracking-[0.3em] text-nvidia-green">Experience</div>
+            <h2 id="experience-title" class="mt-3 text-3xl font-extrabold tracking-tight text-nvidia-black sm:text-4xl lg:text-5xl">Professional experience across engineering, support, and education.</h2>
+            <p class="mt-4 max-w-xl text-base leading-7 text-nvidia-body sm:text-lg">My background blends product ownership, teaching, and community work. That combination makes the portfolio read as practical, not just polished.</p>
+          </div>
+
+          <div class="grid gap-4">
+            <div class="border border-nvidia-hairline bg-nvidia-soft p-5 sm:p-6">
+              <div class="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+                <div>
+                  <h3 class="text-lg font-bold text-nvidia-black">Founder & Lead Developer, PagePilot</h3>
+                  <p class="mt-1 text-xs font-semibold uppercase tracking-[0.24em] text-nvidia-mute">2026 - Present</p>
+                </div>
+                <span class="inline-flex w-fit border border-nvidia-green px-3 py-2 text-[11px] font-bold uppercase tracking-[0.18em] text-nvidia-green">Ownership</span>
+              </div>
+            </div>
+            <div class="border border-nvidia-hairline bg-nvidia-soft p-5 sm:p-6">
+              <div class="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+                <div>
+                  <h3 class="text-lg font-bold text-nvidia-black">Udemy Instructor</h3>
+                  <p class="mt-1 text-xs font-semibold uppercase tracking-[0.24em] text-nvidia-mute">2026 - Present</p>
+                </div>
+                <span class="inline-flex w-fit border border-nvidia-green px-3 py-2 text-[11px] font-bold uppercase tracking-[0.18em] text-nvidia-green">Teaching</span>
+              </div>
+            </div>
+            <div class="border border-nvidia-hairline bg-nvidia-soft p-5 sm:p-6">
+              <div class="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+                <div>
+                  <h3 class="text-lg font-bold text-nvidia-black">Support Lead, Afsar Official Airdrop</h3>
+                  <p class="mt-1 text-xs font-semibold uppercase tracking-[0.24em] text-nvidia-mute">Jan 2025 - Apr 2025</p>
+                </div>
+                <span class="inline-flex w-fit border border-nvidia-green px-3 py-2 text-[11px] font-bold uppercase tracking-[0.18em] text-nvidia-green">Community</span>
+              </div>
+            </div>
+            <div class="border border-nvidia-hairline bg-nvidia-soft p-5 sm:p-6">
+              <div class="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+                <div>
+                  <h3 class="text-lg font-bold text-nvidia-black">Community Manager, SoarFun</h3>
+                  <p class="mt-1 text-xs font-semibold uppercase tracking-[0.24em] text-nvidia-mute">Jul 2024 - Sep 2024</p>
+                </div>
+                <span class="inline-flex w-fit border border-nvidia-green px-3 py-2 text-[11px] font-bold uppercase tracking-[0.18em] text-nvidia-green">Operations</span>
+              </div>
+            </div>
+            <div class="border border-nvidia-hairline bg-nvidia-soft p-5 sm:p-6">
+              <div class="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+                <div>
+                  <h3 class="text-lg font-bold text-nvidia-black">ICT Teacher, Professor's Science Care</h3>
+                  <p class="mt-1 text-xs font-semibold uppercase tracking-[0.24em] text-nvidia-mute">Apr 2023 - May 2024</p>
+                </div>
+                <span class="inline-flex w-fit border border-nvidia-green px-3 py-2 text-[11px] font-bold uppercase tracking-[0.18em] text-nvidia-green">Education</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="border-y border-nvidia-hairline bg-nvidia-black text-white" aria-labelledby="proof-title">
+      <div class="mx-auto grid max-w-7xl gap-6 px-4 py-16 sm:px-6 lg:grid-cols-2 lg:px-8 lg:py-20">
+        <div>
+          <div class="text-[11px] font-bold uppercase tracking-[0.3em] text-white/60">Education + recognition</div>
+          <h2 id="proof-title" class="mt-3 text-3xl font-extrabold tracking-tight text-balance sm:text-4xl lg:text-5xl">Education, contest wins, and AI recognition.</h2>
+        </div>
+        <div class="grid gap-4 sm:grid-cols-2">
+          <div class="border border-white/15 bg-white/[0.04] p-5">
+            <h3 class="text-lg font-bold text-white">B.Sc. in CSE</h3>
+            <p class="mt-2 text-sm leading-7 text-white/72">Northern University of Bangladesh, Dhaka.</p>
+          </div>
+          <div class="border border-white/15 bg-white/[0.04] p-5">
+            <h3 class="text-lg font-bold text-white">HSC - Science</h3>
+            <p class="mt-2 text-sm leading-7 text-white/72">Govt. Bangabandhu College, GPA 4.75 / 5.00.</p>
+          </div>
+          <div class="border border-white/15 bg-white/[0.04] p-5">
+            <h3 class="text-lg font-bold text-white">Champion, MTF Programming Contest 2023</h3>
+            <p class="mt-2 text-sm leading-7 text-white/72">Shows strong problem solving under pressure.</p>
+          </div>
+          <div class="border border-white/15 bg-white/[0.04] p-5">
+            <h3 class="text-lg font-bold text-white">3rd Place, Bangladesh AI Olympiad 2024</h3>
+            <p class="mt-2 text-sm leading-7 text-white/72">Adds credible AI and competition signal.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="insights" class="bg-white px-4 py-16 sm:px-6 lg:px-8 lg:py-24" aria-labelledby="insights-title">
+      <div class="mx-auto max-w-7xl">
+        <div class="max-w-3xl">
+          <div class="text-[11px] font-bold uppercase tracking-[0.3em] text-nvidia-green">Insights</div>
+          <h2 id="insights-title" class="mt-3 text-3xl font-extrabold tracking-tight text-nvidia-black sm:text-4xl lg:text-5xl">Writing that targets the right searches.</h2>
+          <p class="mt-4 max-w-2xl text-base leading-7 text-nvidia-body sm:text-lg">These articles are built to rank for specific queries around backend engineering, Django development, and automation work in Dhaka. They also give visitors a clearer sense of how I think and work.</p>
+        </div>
+
+        <div class="mt-10 grid gap-6 lg:grid-cols-3">
+          <article class="border border-nvidia-hairline bg-nvidia-soft p-6">
+            <div class="text-[11px] font-bold uppercase tracking-[0.28em] text-nvidia-mute">Target query</div>
+            <h3 class="mt-2 text-2xl font-bold tracking-tight text-nvidia-black">Backend Engineer in Dhaka</h3>
+            <p class="mt-4 text-sm leading-7 text-nvidia-body">A location-focused article that explains my stack, process, and the kinds of systems I build for startups and founders.</p>
+            <a href="blog/backend-engineer-in-dhaka.html" class="mt-6 inline-flex items-center border border-nvidia-green bg-nvidia-green px-4 py-3 text-[11px] font-bold uppercase tracking-[0.2em] text-black transition-colors hover:bg-nvidia-greenDark">Read article</a>
+          </article>
+
+          <article class="border border-nvidia-hairline bg-nvidia-soft p-6">
+            <div class="text-[11px] font-bold uppercase tracking-[0.28em] text-nvidia-mute">Target query</div>
+            <h3 class="mt-2 text-2xl font-bold tracking-tight text-nvidia-black">Django Developer</h3>
+            <p class="mt-4 text-sm leading-7 text-nvidia-body">A practical article about Django, DRF, PostgreSQL, and the engineering habits that make a backend reliable.</p>
+            <a href="blog/django-developer.html" class="mt-6 inline-flex items-center border border-nvidia-green bg-nvidia-green px-4 py-3 text-[11px] font-bold uppercase tracking-[0.2em] text-black transition-colors hover:bg-nvidia-greenDark">Read article</a>
+          </article>
+
+          <article class="border border-nvidia-hairline bg-nvidia-soft p-6">
+            <div class="text-[11px] font-bold uppercase tracking-[0.28em] text-nvidia-mute">Target query</div>
+            <h3 class="mt-2 text-2xl font-bold tracking-tight text-nvidia-black">Automation Builder</h3>
+            <p class="mt-4 text-sm leading-7 text-nvidia-body">A supporting article about using automation to save time, reduce errors, and scale repetitive workflows.</p>
+            <a href="blog/automation-builder.html" class="mt-6 inline-flex items-center border border-nvidia-green bg-nvidia-green px-4 py-3 text-[11px] font-bold uppercase tracking-[0.2em] text-black transition-colors hover:bg-nvidia-greenDark">Read article</a>
+          </article>
+        </div>
+
+        <div class="mt-8 border border-nvidia-hairline bg-nvidia-soft p-6">
+          <p class="text-sm leading-7 text-nvidia-body">The content strategy is intentionally simple: one strong portfolio homepage, one blog hub, and a small set of focused articles that reinforce the same identity from different angles.</p>
+          <a href="blog/index.html" class="mt-5 inline-flex items-center border border-nvidia-green bg-nvidia-green px-4 py-3 text-[11px] font-bold uppercase tracking-[0.2em] text-black transition-colors hover:bg-nvidia-greenDark">View blog hub</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="border-b border-nvidia-hairline bg-nvidia-soft px-4 py-16 sm:px-6 lg:px-8 lg:py-24" aria-labelledby="faq-title">
+      <div class="mx-auto max-w-7xl">
+        <div class="max-w-3xl">
+          <div class="text-[11px] font-bold uppercase tracking-[0.3em] text-nvidia-green">FAQ</div>
+          <h2 id="faq-title" class="mt-3 text-3xl font-extrabold tracking-tight text-nvidia-black sm:text-4xl lg:text-5xl">Common questions about Joy Sutradhar.</h2>
+        </div>
+
+        <div class="mt-10 grid gap-4 lg:grid-cols-3">
+          <details class="border border-nvidia-hairline bg-white p-5">
+            <summary class="cursor-pointer list-none text-lg font-bold text-nvidia-black">Who is Joy Sutradhar?</summary>
+            <p class="mt-3 text-sm leading-7 text-nvidia-body">Joy Sutradhar is a backend engineer, Django developer, educator, and automation builder from Dhaka, Bangladesh.</p>
+          </details>
+          <details class="border border-nvidia-hairline bg-white p-5">
+            <summary class="cursor-pointer list-none text-lg font-bold text-nvidia-black">What does he specialize in?</summary>
+            <p class="mt-3 text-sm leading-7 text-nvidia-body">He specializes in Python, Django, Django REST Framework, PostgreSQL, Redis, automation systems, and AI-powered tools.</p>
+          </details>
+          <details class="border border-nvidia-hairline bg-white p-5">
+            <summary class="cursor-pointer list-none text-lg font-bold text-nvidia-black">How can someone hire him?</summary>
+            <p class="mt-3 text-sm leading-7 text-nvidia-body">Use the email link or contact section on this portfolio to start a project discussion.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="bg-white px-4 py-16 sm:px-6 lg:px-8 lg:py-24" aria-labelledby="contact-title">
+      <div class="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[1.1fr_0.9fr]">
+        <div>
+          <div class="text-[11px] font-bold uppercase tracking-[0.3em] text-nvidia-green">Contact</div>
+          <h2 id="contact-title" class="mt-3 max-w-3xl text-3xl font-extrabold tracking-tight text-nvidia-black sm:text-4xl lg:text-5xl">If you want something built with care and clarity, let’s talk.</h2>
+          <p class="mt-5 max-w-2xl text-base leading-7 text-nvidia-body sm:text-lg">I’m best suited to backend-heavy products, automation tools, and projects that need a reliable engineer with a product mindset.
+          </p>
+        </div>
+
+        <div class="border border-nvidia-hairline bg-nvidia-soft p-6 sm:p-8">
+          <div class="text-[11px] font-bold uppercase tracking-[0.3em] text-nvidia-green">Direct links</div>
+          <div class="mt-5 space-y-3 text-sm font-semibold uppercase tracking-[0.24em]">
+            <a class="block border border-nvidia-hairline bg-white px-4 py-4 transition-colors hover:border-nvidia-green hover:text-nvidia-green" href="mailto:joysutradharpc@gmail.com">joysutradharpc@gmail.com</a>
+            <a class="block border border-nvidia-hairline bg-white px-4 py-4 transition-colors hover:border-nvidia-green hover:text-nvidia-green" href="https://joysutradhar.pro.bd" target="_blank" rel="noreferrer">joysutradhar.pro.bd</a>
+            <a class="block border border-nvidia-hairline bg-white px-4 py-4 transition-colors hover:border-nvidia-green hover:text-nvidia-green" href="https://github.com/J0Ysutradhar" target="_blank" rel="noreferrer">GitHub Profile</a>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <footer class="border-t border-nvidia-hairline bg-nvidia-black text-white">
+    <div class="mx-auto flex max-w-7xl flex-col gap-3 px-4 py-6 text-sm text-white/70 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8">
+      <p class="font-semibold uppercase tracking-[0.22em] text-white">Joy Sutradhar</p>
+      <p>Software Developer, Backend Engineer, Educator, and automation builder.</p>
+    </div>
+  </footer>
+
+  <script>
+    const mobileMenu = document.getElementById('mobile-menu');
+    const openButton = document.getElementById('mobile-open');
+    const closeButton = document.getElementById('mobile-close');
+
+    function openMenu() {
+      mobileMenu.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeMenu() {
+      mobileMenu.classList.add('hidden');
+      document.body.style.overflow = '';
+    }
+
+    openButton.addEventListener('click', openMenu);
+    closeButton.addEventListener('click', closeMenu);
+
+    mobileMenu.addEventListener('click', (event) => {
+      if (event.target === mobileMenu) {
+        closeMenu();
+      }
+    });
+
+    mobileMenu.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', closeMenu);
+    });
+  </script>
 </body>
 </html>
