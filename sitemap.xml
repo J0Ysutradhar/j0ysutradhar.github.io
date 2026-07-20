@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://joysutradhar.pro.bd/</loc>
-    <lastmod>2026-07-20</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <image:image>
       <image:loc>https://joysutradhar.pro.bd/joy.webp</image:loc>
       <image:caption>Joy Sutradhar profile photo</image:caption>
@@ -14,34 +14,42 @@
   </url>
   <url>
     <loc>https://joysutradhar.pro.bd/blog/</loc>
-    <lastmod>2026-07-20</lastmod>
+    <lastmod>2026-07-21</lastmod>
   </url>
   <url>
     <loc>https://joysutradhar.pro.bd/blog/backend-engineer-in-dhaka.html</loc>
-    <lastmod>2026-07-20</lastmod>
+    <lastmod>2026-07-21</lastmod>
   </url>
   <url>
     <loc>https://joysutradhar.pro.bd/blog/django-developer.html</loc>
-    <lastmod>2026-07-20</lastmod>
+    <lastmod>2026-07-21</lastmod>
   </url>
   <url>
     <loc>https://joysutradhar.pro.bd/blog/automation-builder.html</loc>
-    <lastmod>2026-07-20</lastmod>
+    <lastmod>2026-07-21</lastmod>
+  </url>
+  <url>
+    <loc>https://joysutradhar.pro.bd/blog/n8n-automation-bangladesh.html</loc>
+    <lastmod>2026-07-21</lastmod>
   </url>
   <url>
     <loc>https://joysutradhar.pro.bd/services/</loc>
-    <lastmod>2026-07-20</lastmod>
+    <lastmod>2026-07-21</lastmod>
   </url>
   <url>
     <loc>https://joysutradhar.pro.bd/services/django-app-development.html</loc>
-    <lastmod>2026-07-20</lastmod>
+    <lastmod>2026-07-21</lastmod>
   </url>
   <url>
     <loc>https://joysutradhar.pro.bd/services/saas-development.html</loc>
-    <lastmod>2026-07-20</lastmod>
+    <lastmod>2026-07-21</lastmod>
   </url>
   <url>
     <loc>https://joysutradhar.pro.bd/services/python-development.html</loc>
-    <lastmod>2026-07-20</lastmod>
+    <lastmod>2026-07-21</lastmod>
+  </url>
+  <url>
+    <loc>https://joysutradhar.pro.bd/services/n8n-developer-dhaka.html</loc>
+    <lastmod>2026-07-21</lastmod>
   </url>
 </urlset>
